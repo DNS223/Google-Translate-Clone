@@ -131,7 +131,7 @@ useEffect(()=>{
         {visibleList &&  <Langs onClick1={establecerIdioma}/>  }
        
         <div className="Right">
-            <div className="idiomasContainer">
+            <div className="idiomasContainer" style={{display:"flex"}}>
                 <Idioma texto="Inglés" color={idioma2 === "en_US" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma2 === "en_US"} onClick={()=>setIdioma2("en_US")}/>
                 <Idioma texto="Español" color={idioma2 === "es_ES" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma2 === "es_ES"} onClick={()=>setIdioma2("es_ES")}/>
                 <Idioma texto="Frances" color={idioma2 === "fr_CA" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma2 === "fr_CA"} onClick={()=>{setIdioma2("fr_CA") }}/>
