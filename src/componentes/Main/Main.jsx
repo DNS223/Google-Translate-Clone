@@ -104,7 +104,7 @@ useEffect(()=>{
        
         <div className="traductorContainer">
             <div className="Left">
-            <div className="idiomasContainer">
+            <div className="idiomasContainer" style={{display:"flex"}}>
                 <Idioma texto="Español" color={idioma1 === "es_ES" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma1 === "es_ES"} onClick={()=>setIdioma1("es_ES")}/>
                 <Idioma texto="Inglés" color={idioma1 === "en_US" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma1 === "en_US"} onClick={()=>setIdioma1("en_US")}/>
                 <Idioma texto="Portugués (Brasil)" color={idioma1 === "pt_PT" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma1 === "pt_PT"} onClick={()=>setIdioma1("pt_PT")}/>
