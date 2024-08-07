@@ -23,7 +23,7 @@
         
     & .idiomasContainer{
         width: calc(100% - 8px);
-        display: flex;
+        display: block;
         align-items: center;
         padding-left:8px;
         background-color: white;
