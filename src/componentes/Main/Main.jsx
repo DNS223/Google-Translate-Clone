@@ -117,7 +117,7 @@ useEffect(()=>{
         onChange={(e) => handleChange(e)} ref={textAreaRef}></textarea>
           {inputText.length>0 ? <button style={{backgroundColor:"transparent", border:"none"}} onClick={cleanTxt}><CloseOutlinedIcon sx={{color:"RGB(95, 99, 104)", cursor:"pointer"}}/></button>  : ""}
        
-                <div className="footerTxt">
+                <div className="footerTxt" style={{display:"flex"}}>
                     <KeyboardVoiceOutlinedIcon/>
 
                     <div className="footerRight">
