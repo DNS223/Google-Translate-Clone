@@ -120,7 +120,7 @@ useEffect(()=>{
                 <div className="footerTxt" style={{display:"flex"}}>
                     <KeyboardVoiceOutlinedIcon/>
 
-                    <div className="footerRight">
+                    <div className="footerRight" style={{display:"flex"}}>
                         <p className="contadorLetras" style={{color:"rgb(95, 99, 104)", fontSize:"12px"}}> <span>{cantidadCaracteres}</span> / 5.000</p>
                         <CreateIcon titleAccess="Activar Escritura a mano"/>
                     </div>
