@@ -1,0 +1,23 @@
+.BtnContianer{
+    padding: 7px 16px 8px 14px;
+    border: 1px solid RGB(218, 220, 224);
+    border-radius: 5px;
+    display: inline-block;
+    color: RGB(25, 103, 210);
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    align-items: center;
+    
+    
+    & .texto{
+        & svg{
+            width: 20px;
+            height: 24px;
+            margin-right: 9px;
+        }
+        display: flex;
+        align-items: center;
+    }
+}

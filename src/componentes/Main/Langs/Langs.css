@@ -1,0 +1,43 @@
+.LangsContainer{
+    width: 1270px;
+
+    top: 112px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid RGB(218, 220, 224);
+    border-radius: 8px;
+}
+
+.searchBar{
+    height: 60px;
+    width: calc(100% - 20px);
+    border-radius: 3px;
+    border-bottom: 1px solid RGB(218, 220, 224);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    & svg{
+        color: RGB(95, 99, 104);
+        padding-right: 32px;
+    }
+    & .buscador{
+        width: calc(100% - 110px);
+        height: 25px;
+        font-size: 16px;
+        border: none;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.LangsList{
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    & p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
