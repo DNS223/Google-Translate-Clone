@@ -26,10 +26,6 @@ export default function Langs({onClick1}){
       },[])
     return(
         <div className="LangsContainer">
-            <div className="searchBar">
-                <ArrowBackOutlinedIcon/>
-                <input type="text" className="buscador" placeholder="Buscar idiomas"/>
-            </div>
             <div className="LangsList">
                 {langList.map((lang)=>{
                     return(

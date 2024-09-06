@@ -20,6 +20,7 @@ export default function Main(){
     const [idioma1, setIdioma1] = useState("es_ES")
     const [idioma2, setIdioma2] = useState("en_US")
     const [visibleList, setVisibleList] = useState(false)
+    const [btnClicked, setBtnClicked] = useState(false)
     const textAreaRef = useRef(null);
     const Reajuste = (e)=>{
         e.target.style.height = 'auto'
@@ -88,9 +89,19 @@ useEffect(()=>{
         setInputText("")
       }
 
-      const establecerIdioma= (lang1)=>{
+      const establecerIdioma1= (lang1)=>{
         console.log(lang1)
+        setVisibleList(false)
         setIdioma1(lang1)
+      }
+      const establecerIdioma2= (lang2)=>{
+        console.log(lang2)
+        setVisibleList(false)
+        setIdioma2(lang2)
+      }
+      const MostrarList = (btn)=>{
+        setVisibleList(!visibleList)
+        setBtnClicked(btn)
       }
     return(
         <div className="MainContainer">
@@ -108,8 +119,8 @@ useEffect(()=>{
                 <Idioma texto="Español" color={idioma1 === "es_ES" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma1 === "es_ES"} onClick={()=>setIdioma1("es_ES")}/>
                 <Idioma texto="Inglés" color={idioma1 === "en_US" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma1 === "en_US"} onClick={()=>setIdioma1("en_US")}/>
                 <Idioma texto="Portugués (Brasil)" color={idioma1 === "pt_PT" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma1 === "pt_PT"} onClick={()=>setIdioma1("pt_PT")}/>
-                <button style={{backgroundColor:"transparent", border:"none"}} onClick={()=>setVisibleList(!visibleList)}><KeyboardArrowDownOutlinedIcon/></button>
-                <button onClick={handleSwap}><SwapHorizIcon style={{position:"absolute", left:"49%",top:"75px"}}/></button>
+                <button style={{backgroundColor:"transparent", border:"none"}} onClick={()=>MostrarList(1)}><KeyboardArrowDownOutlinedIcon/></button>
+                
                 
             </div>
             <div className="txtLeft" onClick={()=>handleContainerClick()}>
@@ -128,14 +139,14 @@ useEffect(()=>{
             </div>
             
         </div>
-        {visibleList &&  <Langs onClick1={establecerIdioma}/>  }
-       
+        {visibleList &&  <Langs onClick1={btnClicked==1 ? establecerIdioma1 : establecerIdioma2} />  }
+        <button onClick={handleSwap}style={{height:"30px", backgroundColor:"transparent", border:"none"}}><SwapHorizIcon /></button>
         <div className="Right">
             <div className="idiomasContainer" style={{display:"flex"}}>
                 <Idioma texto="Inglés" color={idioma2 === "en_US" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma2 === "en_US"} onClick={()=>setIdioma2("en_US")}/>
                 <Idioma texto="Español" color={idioma2 === "es_ES" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma2 === "es_ES"} onClick={()=>setIdioma2("es_ES")}/>
                 <Idioma texto="Frances" color={idioma2 === "fr_CA" ? "rgb(26, 115, 232)" : "RGB(101, 105, 109)"} isSelected={idioma2 === "fr_CA"} onClick={()=>{setIdioma2("fr_CA") }}/>
-                <KeyboardArrowDownOutlinedIcon/>
+                <button style={{backgroundColor:"transparent", border:"none"}} onClick={()=>MostrarList(2)}><KeyboardArrowDownOutlinedIcon/></button>
                 
                 
             </div>
